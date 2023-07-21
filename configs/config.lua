@@ -10,19 +10,19 @@ function L(cd) if Locales[Config.Language][cd] then return Locales[Config.Langua
 --╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝ ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 
 
-Config.Framework = 'esx' ---[ 'esx' / 'qbcore' / 'vrp' / 'aceperms' / 'identifiers', 'other' ] Choose your framework (by framework we mean choose the permission system you want to use).
+Config.Framework = 'qbcore' ---[ 'esx' / 'qbcore' / 'vrp' / 'aceperms' / 'identifiers', 'other' ] Choose your framework (by framework we mean choose the permission system you want to use).
 Config.Language = 'EN' --[ 'EN' / 'FR' / 'ES' ] You can add your own locales to the Locales.lua. But make sure to add it here.
 
 Config.FrameworkTriggers = { --You can change the esx/qbcore events (IF NEEDED).
-    main = 'esx:getSharedObject',   --ESX = 'esx:getSharedObject'   QBCORE = 'QBCore:GetObject'
-    load = 'esx:playerLoaded',      --ESX = 'esx:playerLoaded'      QBCORE = 'QBCore:Client:OnPlayerLoaded'
-    job = 'esx:setJob',             --ESX = 'esx:setJob'            QBCORE = 'QBCore:Client:OnJobUpdate'
-    resource_name = 'es_extended'   --ESX = 'es_extended'           QBCORE = 'qb-core'
+    main = 'QBCore:GetObject',   --ESX = 'esx:getSharedObject'   QBCORE = 'QBCore:GetObject'
+    load = 'QBCore:Client:OnPlayerLoaded',      --ESX = 'esx:playerLoaded'      QBCORE = 'QBCore:Client:OnPlayerLoaded'
+    job = 'QBCore:Client:OnJobUpdate',             --ESX = 'esx:setJob'            QBCORE = 'QBCore:Client:OnJobUpdate'
+    resource_name = 'qb-core'   --ESX = 'es_extended'           QBCORE = 'qb-core'
 }
 
 Config.NotificationType = { --[ 'esx' / 'qbcore' / 'mythic_old' / 'mythic_new' / 'chat' / 'other' ] Choose your notification script.
-    server = 'esx',
-    client = 'esx' 
+    server = 'qbcore',
+    client = 'qbcore' 
 }
 
 Config.Command = {
@@ -33,7 +33,7 @@ Config.Command = {
         ['qbcore'] = {'god', 'admin'},
         ['vrp'] = {'change_me', 'change_me'},
         ['aceperms'] = {'change_me', 'change_me'},
-        ['identifiers'] = {'steam:xxxxx', 'license:xxxxx'},
+        ['identifiers'] = {'steam:xxxxx', 'license:e49e354c7058838fd630b947306b5d88aadcb060'},
         ['other'] = {'change_me', 'change_me'}
     }
 }
